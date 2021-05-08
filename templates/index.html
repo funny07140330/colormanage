@@ -1,0 +1,463 @@
+<html lang="zh-CN"><head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<title>正式版-商家管理后台</title>
+<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+<link rel="shortcut icon" href="/static/favicon/hbmp.ico">
+<style>
+    .person-content-right .edit-wrap .form-group > label{
+        width: 110px;
+    }
+    .user-container .person-content-left{
+        width: 190px;
+    }
+    .user-container .person-content-right{
+        margin-left: 190px;
+    }
+    .user-side-menu dt > a, .user-side-menu dt > span, .user-side-menu dd a{
+        padding-left: 52px;
+    }
+    .user-side-menu dt:before{
+        border:0;
+    }
+</style>
+<!--[if lt IE 9]>
+<script src="https://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+<![endif]-->
+
+<script charset="UTF-8" src="//user-analysis.7moor.com/js/uba.min.js?v=20201208"></script><script charset="UTF-8" src="//webchat.7moor.com/javascripts/QiMoIMSDK.js?accessId=a8b9dc50-a4dd-11e7-8924-959763bbd83d&amp;v=20201208"></script><script src="https://hm.baidu.com/hm.js?f49d6bf4b6555e3016dd3b99a9a5b197"></script><script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?f49d6bf4b6555e3016dd3b99a9a5b197";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<link type="text/css" rel="stylesheet" href="//webchat.7moor.com//stylesheets/chatStyle.css?v=20201208"></head>
+<body>
+<!--[if lt IE 9]>
+<script src="/static/js/isIE.js"></script>
+<![endif]-->
+
+<div class="user-container">
+    <div class="contentW clearfix">
+        <div class="person-content-left common-shadow">
+            <!--企业中心左边菜单 S-->
+            <div class="user-side-menu">
+    <dl>
+
+        <!--商品模块-->
+
+        <!--作品模块-->
+
+        <!--色卡模块-->
+                <dt>
+            <span><i class="kicon-naviconworks"></i>
+            <b>色卡管理</b></span>
+        </dt>
+        <dd><a href="/index/">色卡列表</a></dd>
+        <dd><a href="/page2/">色卡上传</a></dd>
+        <dd><a href="/page3/">色卡分类列表</a></dd>
+
+        <dt>
+            <span><i class="kicon-naviconworks"></i>
+            <b>系统操作</b></span>
+        </dt>
+        <dd><a href="/logout/">退出</a></dd>
+    </dl>
+</div>
+            <!--企业中心左边菜单 E-->
+        </div>
+        <div class="person-content-right common-shadow">
+            <div class="accout-wrap">
+                <div class="accout-title">
+                    <span>色卡列表</span>
+                </div>
+                <div class="edit-box">
+                    <form class="bk-form form-left-width label-80px bg-gray row pd10" style="overflow: hidden;margin-bottom: 20px;">
+                        <div class="form-group col-lg-4">
+                            <label for="">我的分类:</label>
+                            <div class="form-group-element flex nowrap">
+                                <div class="multistep">
+                                    <select name="cateid">
+                                        <option value="">选择分类</option>
+                                                                                <option value="1198">卫衣系列</option>
+                                                                                <option value="1272">坑条</option>
+                                                                                <option value="1273">棉衣</option>
+                                                                            </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <label>上下架:</label>
+                            <div class="form-group-element">
+                                <select name="status">
+                                    <option value="">全部</option>
+                                    <option value="1">上架</option>
+                                    <option value="2">下架</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-lg-3">
+                            <label>色卡名:</label>
+                            <div class="form-group-element">
+                                <input type="text" name="kw" value="">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-theme right" id="submit" style="width:100px;margin-top:6px;">筛选</button>
+                    </form>
+                    <div class="clearfix"></div>
+                    <div class="table-toolbar">
+                        <div class="left pdt10">
+
+                            <span>查询到匹配结果 <b class="text-red">1 </b>条</span>
+                        </div>
+                        <!--<div class="right">-->
+                            <!--<div class="search search-small search-gray radius">-->
+                                <!--<input class="bk-form-field mg0" type="text" name="kw" value="" placeholder="请输入色卡名或货号">-->
+                                <!--<button class="btn-theme" id="name_search">搜索</button>-->
+                                <!--<i class="kicon-search"></i>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    </div>
+                                        <table class="common-table common-table-bd common-table-striped vertical-middle">
+                        <thead>
+                        <tr>
+                            <th style="width:36px;text-align: center"></th>
+                            <th style="text-align: center">色卡信息</th>
+                            <th style="text-align: center">时间信息</th>
+                            <th style="text-align: center">上架状态</th>
+                            <th style="text-align: center">管理</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                                                <tr>
+                            <td>3816</td>
+                            <td>
+                                <div class="common-avatar user-headx100 radius common-avatar-left v-middle">
+                                    <div class="avatar-thumb">
+                                        <a href=""><img src="//img.haobump.com/colorCard/pic/2020-12-31/142505f7a9ff50e32b4e3cd962d643b3.png?x-oss-process=image/resize,w_100,h_100/quality,q_50"></a>
+                                    </div>
+                                    <div class="avatar-info">
+                                        <div class="avatar-hd">卫衣衬衣</div>
+                                        <div class="avatar-text">编号：0001#</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p>创建时间：<span class="craeat-time">2020-12-31 21:42:52</span></p>
+                            </td>
+
+
+                                                        <td><span class="text-green">已上架 </span></td>
+
+                            <td class="list-hr-span hover">
+
+                                <div style="margin:0 auto;width: 200px;">
+
+                                    <span><a href="/colorcard-colour/list/3816">色号</a></span>
+
+                                    <span><a href='javascript:window.location.href="/colorcard/edit/3816"'><i class="kicon-bianji fs20" style="vertical-align: top;"></i>编辑</a></span>
+
+                                                                        <span data-manage="xiajia" data-id="3816"><i class="kicon-unfold"></i>下架</span>
+                                                                        <span data-manage="shanchu" data-id="3816" class="del_fabric"><i class="kicon-close-o fs20" style="vertical-align: top;"></i>删除</span>
+                                                                    </div>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                    <div class="table-toolbar table-pagination">
+
+                        <div class="right">
+                            <div class="pages">
+                                                            </div>
+                        </div>
+                    </div>
+                                    </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/static/js/lib/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/static/js/cpb.js"></script>
+<script type="text/javascript" src="https://webchat.7moor.com/javascripts/7moorInit.js?accessId=a8b9dc50-a4dd-11e7-8924-959763bbd83d&amp;autoShow=false" async="async"></script>
+<script>
+    //轮播组件调用
+    var firtImg = $('.ck-slide').find('img');
+
+    if(firtImg.length !== 0){
+        if(firtImg.get(0).complete || firtImg.readyState == "complete"){
+            $('.ck-slide').ckSlide({
+                autoPlay: true,
+            });
+        }else{
+            firtImg.eq(0).load(function () {
+                $('.ck-slide').ckSlide({
+                    autoPlay: true
+                });
+            });
+        }
+    }
+
+</script>
+
+
+
+
+
+
+<script>
+    $(function(){
+
+        //面料管理对象
+        var manage={};
+
+        manage.getDataId=function(that){
+            //这里判断是不是全选的
+            if($(that).attr('data-id')){
+                return $(that).attr('data-id');
+            }else{
+
+                //这里是全选的
+
+                var checkBox=$('[check-data-id]:checked');
+                var id='';
+
+                for(var i=0;i<checkBox.length;i++){
+                    if(id==''){
+                        id=$(checkBox[i]).attr('check-data-id')
+                    }else{
+                        id+=(','+$(checkBox[i]).attr('check-data-id'))
+                    }
+                }
+
+                return id?id:0
+            }
+        }
+
+        manage.eventCallback=function(){
+
+
+
+
+            var eventType=$(this).attr('data-manage')
+            var dataId=manage.getDataId(this)
+
+
+            if(!dataId){
+                alert('没有选中的项')
+                return false;
+            }
+
+            var method,url,data,msg;
+
+            switch(eventType){
+                case 'xiajia':
+
+                    msg="下架"
+                    method='post';
+                    url='/ajax/colorcard/status';
+                    data={cid:dataId,status:2};
+
+                    break;
+                case 'shangjia':
+                    msg="上架"
+                    method='post';
+                    url='/ajax/colorcard/status';
+                    data={cid:dataId,status:1};
+                    break;
+
+                case 'shanchu':
+                    msg="删除"
+                    method='post';
+                    url='/ajax/colorcard/status';
+                    data={cid:dataId,status:3};
+                    break;
+
+//                case 'fabu':
+//                    msg="恢复"
+//                    method='post';
+//                    url='/goods/unrecy';
+//                    data={goodsid:dataId};
+//                    break;
+
+//                case 'huishou':
+//                    msg="放入回收站"
+//                    method='post';
+//                    url='/goods/recy';
+//                    data={goodsid:dataId};
+//                    break;
+
+
+//				case 'tijiaoshenhe':
+//					msg="提交审核"
+//					method='post';
+//					url='/user/supplier/material/materialAuditSubmitAjax';
+//					data={goodsid:dataId};
+//				break;
+//
+//				case 'quxiaoshenhe':
+//					msg="取消审核"
+//					method='post';
+//					url='/user/supplier/material/materialAuditCancelAjax';
+//					data={goodsid:dataId};
+//				break;
+            }
+
+            if(!confirm("确认"+msg+"吗?")){
+                return false;
+            }
+
+            manage.request(method,url,data)
+        }
+
+
+        manage.request=function(method,url,data){
+            $.ajax({
+                method:method,
+                url:url,
+                data:data,
+                success:function(res){
+                    console.log(res)
+                    alert(res.msg)
+                    window.location.reload()
+                }
+            })
+        }
+
+        $('[data-manage]').click(manage.eventCallback)
+
+    })
+
+    $(function(){
+        //这里是面料名称搜索
+        $('#name_search').click(function(){
+            window.location.href='?m_name='+$("[name='m_name']").val()
+        })
+
+
+        setTimeout(function(){
+            $("[name='custom_cateid'] option[value='"+$('#old_custom_cateid').val()+"']").attr('selected','selected')
+
+            $("[name='f_cateid'] option[value='"+$('#old_f_cateid').val()+"']").attr('selected','selected')
+
+
+
+
+
+
+
+            //获取面料顶级分类
+            $.ajax({
+                method:'GET',
+                url:'/material-category-list',
+                data:{parentid:0},
+                success:function(res){
+
+                    if(res.code ==200){
+                        var optionstring = '';
+                        $.each(res.data.cates, function (i, item) {
+                            optionstring += "<option value='" + item.categoryid + "'>" + item.catname +"</option>";
+
+                        });
+                        $("#platform-class").html("<option value=''>选择分类</option> " + optionstring);
+                    }
+
+                    //选中旧分类
+                    $("[name='f_cateid'] option[value='"+$('#old_f_cateid').val()+"']").attr('selected','selected')
+
+                }
+            })
+            //获取面料二级分类
+            if($('#old_cateid').val()){
+                $.ajax({
+                    method:'GET',
+                    url:'/material-category-list',
+                    data:{parentid:$('#old_f_cateid').val()},
+                    success:function(res){
+
+                        if(res.code ==200){
+                            var optionstring = '';
+                            $.each(res.data.cates, function (i, item) {
+                                optionstring += "<option value='" + item.categoryid + "'>" + item.catname +"</option>";
+
+                            });
+                            $("#platform-class-child").html("<option value=''>选择分类</option> " + optionstring);
+                        }
+
+                        //选中旧分类
+                        $("[name='cateid'] option[value='"+$('#old_cateid').val()+"']").attr('selected','selected')
+
+                    }
+                })
+            }
+
+
+
+
+
+
+
+            //获取自定义分类
+            $.ajax({
+                method:'GET',
+                url:'/supplier-category-list',
+                data:{parentid:0},
+                success:function(res){
+
+                    if(res.code ==200){
+                        var optionstring = '';
+                        $.each(res.data.cates, function (i, item) {
+                            optionstring += "<option value='" + item.categoryid + "'>" + item.catname +"</option>";
+
+                        });
+                        $("#meCategory").html("<option value=''>选择分类</option> " + optionstring);
+                    }
+
+                    //选中旧分类
+                    $("[name='custom_cateid'] option[value='"+$('#old_custom_cateid').val()+"']").attr('selected','selected')
+
+                }
+            })
+
+
+
+
+
+
+        },1500)
+    })
+
+
+    var userAgent = navigator.userAgent;
+    var isOpera = userAgent.indexOf("Opera") > -1;
+    var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera;
+    var isEdge = userAgent.indexOf("Trident") > -1;
+    if(isIE || isEdge){
+
+        $('#endTime').val('ie下不支持选择').attr({disabled:'disabled'});
+        $('#startTime').val('ie下不支持选择').attr({disabled:'disabled'});
+
+    }
+
+    //    if($('.table-toolbar').find('b').text() == 0){
+    //        $('.table-toolbar').after(
+    //            '<div class="tips-wrap">'+
+    //            '<div class="tips-pic"><img src="http://user-admin.haobump.com/static/images/common/mascot/mascot01.png" alt="小黄铅-摊手"></div>'+
+    //
+    //            '<div class="tips-text">对不起，没有找到您想匹配的面料</div>'+
+    //            '</div>'
+    //        )
+    //
+    //    }
+
+</script><script type="text/javascript" charset="UTF-8" src="//webchat.7moor.com/online?accessId=a8b9dc50-a4dd-11e7-8924-959763bbd83d&amp;unionAccessId=undefined&amp;location=user-admin.haobump.com&amp;referrer=http%3A%2F%2Fuser-admin.haobump.com%2Fcolorcard%2Fcreate&amp;callbackF=getChatConfig&amp;action=getOnlineStates&amp;sid=&amp;__=1609666375557"></script><div><div class="qimo_chatpup" id="qimo_chatpup" style="display: none; right: 18px;"><iframe id="chatIframe" src="//webchat.7moor.com/view/moor_chat.html?v=20201208&amp;clientId=&amp;urlTitle=%E6%AD%A3%E5%BC%8F%E7%89%88-%E5%95%86%E5%AE%B6%E7%AE%A1%E7%90%86%E5%90%8E%E5%8F%B0&amp;fromUrl=http%3A%2F%2Fuser-admin.haobump.com%2Fcolorcard%2Flist&amp;serviceStates=1&amp;accessId=a8b9dc50-a4dd-11e7-8924-959763bbd83d&amp;styleColor=ff4242&amp;peers=%5B%7B%22name%22%3A%22%E6%AC%BE%E6%AC%BE%E7%BD%91%22%2C%22id%22%3A%2210024507%22%2C%22status%22%3A%22enable%22%7D%5D&amp;sessionLastToPeer=&amp;otherParams=&amp;seoSource=%E7%AB%99%E5%86%85&amp;seoKeywords=&amp;xstKeywords=&amp;companyName=%E6%AC%BE%E6%AC%BE&amp;seoUrl=http%3A%2F%2Fuser-admin.haobump.com%2Fcolorcard%2Fcreate&amp;language=zh-CN&amp;href=http%3A%2F%2Fuser-admin.haobump.com%2F&amp;priority=false&amp;showAnnexUrl=false&amp;unionAccessId=undefined" height="100%" width="100%"></iframe><div id="maskChat"></div></div><div id="chatBtn" class="chatBtn" style="display: none; right: 18px; z-index: -100; background-color: rgb(255, 66, 66); border-radius: 5px 5px 0px 0px; bottom: -1px; padding: 8px 10px;"><img width="25px" height="25px" src="//webchat.7moor.com/images/7.png?1221" style="margin: 0px 5px -6px 0px;"><span>咨询客服</span><span id="qimo_badge"></span></div><div id="qimo_showNewMsg" class="qimo_showNewMsg" style="display: none; "><div id="qimo_showNewMsg_box" class="qimo_showNewMsg_box"><div id="qimo_showNewMsg_title_box" class="qimo_showNewMsg_title_box"><img src="//webchat.7moor.com/images/agentLogo.png"><span id="qimo_showNewMsg_title" class="qimo_showNewMsg_title"></span></div> <div id="qimo_showNewMsg_content" class="qimo_showNewMsg_content"></div></div><span id="qimo_showNewMsg_close" class="qimo_showNewMsg_close">x</span></div></div><script type="text/javascript" charset="UTF-8" src="//webchat.7moor.com/online?accessId=a8b9dc50-a4dd-11e7-8924-959763bbd83d&amp;location=user-admin.haobump.com&amp;action=validateEmebedState&amp;callbackF=validateEmebedState&amp;__=1609666375733"></script><div><div class="qimo_inviteBox" id="qimo_inviteBox" style="display: none; "><img class="qimo_invite_close" id="qimo_invite_close" src="//webchat.7moor.com/images/invite-close.png"><div class="qimo_inviteBox_top"><div class="qimo_inviteBox_top_img" id="qimo_inviteBox_top_img"><img id="qimo_inviteBox_img" src="//webchat.7moor.com/images/defaultPhoto.png"></div><div class="qimo_inviteBox_top_right" id="qimo_inviteBox_top_right"><p id="qimo_inviteBox_InviteWords"></p><div class="qimo_inviteBox_top_button" id="qimo_inviteBox_top_button"><div id="invite_click_button_1" class="divbuttons msie11PadTop">立即咨询</div><div id="invite_click_button_2" class="divbuttons msie11PadTop">稍后再说</div></div></div></div><div class="qimo_inviteBox_bottom"><textarea id="sendInviteText" placeholder="请输入您想要输入的内容..." rows="2"></textarea><div id="sendInviteContent" class="sendInviteContent msie11PadTop">发送</div></div></div></div><div><div class="qimo_screenpop" id="qimo_screenpop" style="display: none"><div class="screendragbar" id="screendrag"></div><div class="qimo_headerimg" id="qimo_headerimg"><div class="screenminimg" style="display: none" id="screenminimg"><img src="//webchat.7moor.com/images/small.png"></div><div class="screenminimg" id="screenmaximg"><img src="//webchat.7moor.com/images/big.png"></div><div class="screenminimg" id="screencloseimg"><img src="//webchat.7moor.com/images/close.png" style="width: 16px;height: 16px;"></div></div> <div id="mask"></div><iframe id="screenIframe" src="" height="100%" width="100%" allow="microphone; camera"></iframe></div></div><div><div class="qimo_videopup" id="qimo_videopup" style="display: none"><div style="" class="m7_dragbar" id="drag"><div class="qimo_minimg" id="qimo_minimg"><img src="//webchat.7moor.com/images/small.png"></div><div class="qimo_maximg" id="qimo_maximg" style="display: none"><img src="//webchat.7moor.com/images/big.png"></div> </div><div id="mask"></div><div id="m7videoIframe" style=" height: 100%; width: 100%;"></div></div></div></body><div class="service_pop dialog-wrap"> <div class="dialog pop-wrap" style=""><div class="pop-box-hd"><h4 id="download">咨询客服</h4> <div class="close"><i class="kicon-close"></i></div></div> <div class="pop-box"> <h4 class="mgt20 mgb50 fs20">是否要咨询客服?</h4><div class="pop-box-footer">  <button id="contentSure" class="btn-theme width-3 mgr20" onclick="qimoChatClick();">确定</button>  <button class="btn-gray width-3 close">取消</button></div></div> </div><div class="black-overlay"></div></div></html>

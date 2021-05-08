@@ -1,0 +1,376 @@
+<html lang="zh-CN"><head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<title>正式版-商家管理后台</title>
+<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+<link rel="shortcut icon" href="/static/favicon/hbmp.ico">
+<style>
+    .person-content-right .edit-wrap .form-group > label{
+        width: 110px;
+    }
+    .user-container .person-content-left{
+        width: 190px;
+    }
+    .user-container .person-content-right{
+        margin-left: 190px;
+    }
+    .user-side-menu dt > a, .user-side-menu dt > span, .user-side-menu dd a{
+        padding-left: 52px;
+    }
+    .user-side-menu dt:before{
+        border:0;
+    }
+</style>
+<!--[if lt IE 9]>
+<script src="https://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+<![endif]-->
+
+<script charset="UTF-8" src="//user-analysis.7moor.com/js/uba.min.js?v=20201208"></script><script charset="UTF-8" src="//webchat.7moor.com/javascripts/QiMoIMSDK.js?accessId=a8b9dc50-a4dd-11e7-8924-959763bbd83d&amp;v=20201208"></script><script src="https://hm.baidu.com/hm.js?f49d6bf4b6555e3016dd3b99a9a5b197"></script><script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?f49d6bf4b6555e3016dd3b99a9a5b197";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<link type="text/css" rel="stylesheet" href="//webchat.7moor.com//stylesheets/chatStyle.css?v=20201208"></head>
+<body>
+<!--[if lt IE 9]>
+<script src="/static/js/isIE.js"></script>
+<![endif]-->
+
+<div class="user-container">
+    <div class="contentW clearfix">
+        <div class="person-content-left common-shadow">
+            <!--企业中心左边菜单 S-->
+            <div class="user-side-menu">
+    <dl>
+
+        <!--商品模块-->
+
+        <!--作品模块-->
+
+        <!--色卡模块-->
+                <dt>
+            <span><i class="kicon-naviconworks"></i>
+            <b>色卡管理</b></span>
+        </dt>
+        <dd><a href="/index/">色卡列表</a></dd>
+        <dd><a href="/page2/">色卡上传</a></dd>
+        <dd><a href="/page3/">色卡分类列表</a></dd>
+
+        <dt>
+            <span><i class="kicon-naviconworks"></i>
+            <b>系统操作</b></span>
+        </dt>
+        <dd><a href="/logout/">退出</a></dd>    </dl>
+</div>
+            <!--企业中心左边菜单 E-->
+        </div>
+        <div class="person-content-right common-shadow">
+
+
+            <div class="accout-wrap">
+                <div class="accout-title">
+                    <span>色卡分类管理</span>
+                </div>
+                <div class="edit-box">
+
+                    <ul class="icon-list organizational">
+                                                <li>
+                            <div class="icon-list-parent">
+                                <div class="icon-list-ico"><i class="kicon-">-</i></div>
+                                <div class="icon-list-info">
+                                    <div class="icon-list-hd">
+                                        <span class="cate-name">卫衣系列</span>
+                                        <span>（分类ID：1198）</span>
+                                    </div>
+                                    <div class="icon-list-hd"></div>
+                                    <div class="icon-list-tail hover-em">
+                                        <em class="myCategory_edit" data-custom-cate-manage="edit" data-custom-cate-id="1198" data-listorder="0" data-catename="卫衣系列"><i class="kicon-bianji"></i> 编辑分类</em>
+                                        <em class="myCategory_del" data-custom-cate-manage="delete" data-custom-cate-id="1198"><i class="kicon-close-o"></i> 删除分类</em>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </li>
+                                                <li>
+                            <div class="icon-list-parent">
+                                <div class="icon-list-ico"><i class="kicon-">-</i></div>
+                                <div class="icon-list-info">
+                                    <div class="icon-list-hd">
+                                        <span class="cate-name">坑条</span>
+                                        <span>（分类ID：1272）</span>
+                                    </div>
+                                    <div class="icon-list-hd"></div>
+                                    <div class="icon-list-tail hover-em">
+                                        <em class="myCategory_edit" data-custom-cate-manage="edit" data-custom-cate-id="1272" data-listorder="1" data-catename="坑条"><i class="kicon-bianji"></i> 编辑分类</em>
+                                        <em class="myCategory_del" data-custom-cate-manage="delete" data-custom-cate-id="1272"><i class="kicon-close-o"></i> 删除分类</em>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </li>
+                                                <li>
+                            <div class="icon-list-parent">
+                                <div class="icon-list-ico"><i class="kicon-">-</i></div>
+                                <div class="icon-list-info">
+                                    <div class="icon-list-hd">
+                                        <span class="cate-name">棉衣</span>
+                                        <span>（分类ID：1273）</span>
+                                    </div>
+                                    <div class="icon-list-hd"></div>
+                                    <div class="icon-list-tail hover-em">
+                                        <em class="myCategory_edit" data-custom-cate-manage="edit" data-custom-cate-id="1273" data-listorder="3" data-catename="棉衣"><i class="kicon-bianji"></i> 编辑分类</em>
+                                        <em class="myCategory_del" data-custom-cate-manage="delete" data-custom-cate-id="1273"><i class="kicon-close-o"></i> 删除分类</em>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </li>
+                                                <li>
+                            <div class="icon-list-parent icon-list-add-one">
+                                <div class="icon-list-info">
+                                    <div class="icon-list-hd icon-list-add">
+                                        <em data-custom-cate-manage="add"><i class="kicon-add-o"></i> 新建一级分类</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+<!--编辑弹窗-->
+<div class="dialog-wrap" style="display: none;" data-act-window="edit">
+    <div class="dialog pop-wrap">
+        <div class="pop-box-hd"><h4>编辑分类</h4>
+            <div class="close dialog_close"><i class="kicon-close"></i></div>
+        </div>
+        <div class="pop-box-bd">
+            <div style="display: flex;">
+                <div class="title" style="width: 40%;line-height: 40px;font-size: 15px">修改分类名</div>
+                <input type="text" data-customcate-input="edit" class="bk-form-field width-7" placeholder="分类名建议4个字" maxlength="10">
+            </div>
+            <div style="display: flex">
+                <div class="title" style="width: 40%;line-height: 40px;font-size: 15px">修改序号</div>
+                <input type="number" data-listorder-input="edit" class="bk-form-field width-7" placeholder="序号最多为两位数" maxlength="2">
+            </div>
+        </div>
+        <div class="pop-box-footer">
+            <p class="sub-contact">
+                <input type="submit" class="btn-theme btn-length mgr20 dialog_close" data-customcate-comfirm="edit" value="确定">
+                <input type="submit" class="btn-black btn-length dialog_close" value="取消">
+            </p>
+        </div>
+    </div>
+    <div class="black-overlay"></div>
+</div>
+<!--删除弹窗-->
+<div class="dialog-wrap" style="display: none;" data-act-window="delete">
+    <div class="dialog pop-wrap">
+        <div class="pop-box-hd"><h4>删除分类</h4>
+            <div class="close dialog_close"><i class="kicon-close"></i></div>
+        </div>
+        <div class="pop-box-bd">
+            <i class="kicon-warning pop-box-icon"></i>
+            <div class="title">删除分类</div>
+            <div class="article">
+                删除分类后，所属该分类面料将移动至默认分类
+            </div>
+        </div>
+        <div class="pop-box-footer">
+            <p class="sub-contact">
+                <a href="javascript:" class="btn-theme btn-length mgr20 dialog_close" data-customcate-comfirm="delete">删除</a>
+                <a href="javascript:" class="btn-black btn-length dialog_close">取消</a>
+            </p>
+        </div>
+    </div>
+    <div class="black-overlay"></div>
+</div>
+<!--新建弹窗-->
+<div class="dialog-wrap" data-act-window="add">
+    <div class="dialog pop-wrap">
+        <div class="pop-box-hd"><h4>新建分类</h4>
+            <div class="close dialog_close"><i class="kicon-close"></i></div>
+        </div>
+        <div class="pop-box-bd">
+            <div style="display:flex">
+                <div class="title" style="width: 40%;line-height: 40px;font-size: 15px">新建分类</div>
+                <input data-customcate-input="add" class="bk-form-field width-7" type="text" placeholder="分类名建议4个字" maxlength="10">
+            </div>
+            <div style="display:flex">
+                <div class="title" style="width: 40%;line-height: 40px;font-size: 15px">设置序号</div>
+                <input type="text" data-listorder-input="add" class="bk-form-field width-7" placeholder="序号最多为两位数" maxlength="2">
+            </div>
+        </div>
+        <div class="pop-box-footer">
+            <p class="sub-contact">
+                <a href="javascript:" class="btn-theme btn-length mgr20 dialog_close" data-customcate-comfirm="add">确定</a>
+                <a href="javascript:" class="btn-black btn-length dialog_close">取消</a>
+            </p>
+        </div>
+    </div>
+    <div class="black-overlay"></div>
+</div>
+
+<script type="text/javascript" src="/static/js/lib/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="https://webchat.7moor.com/javascripts/7moorInit.js?accessId=a8b9dc50-a4dd-11e7-8924-959763bbd83d&amp;autoShow=false" async="async"></script>
+
+<script>
+    document.write("<script type='text/javascript' src='/static/js/utils.js?"+Math.random()+"'></scri"+"pt>");
+</script><script type="text/javascript" src="/static/js/utils.js?0.8373341247073269"></script><script type="text/javascript" charset="UTF-8" src="//webchat.7moor.com/online?accessId=a8b9dc50-a4dd-11e7-8924-959763bbd83d&amp;unionAccessId=undefined&amp;location=user-admin.haobump.com&amp;referrer=http%3A%2F%2Fuser-admin.haobump.com%2Fcolorcard%2Fcreate&amp;callbackF=getChatConfig&amp;action=getOnlineStates&amp;sid=&amp;__=1609667122793"></script><div><div class="qimo_chatpup" id="qimo_chatpup" style="display: none; right: 18px;"><iframe id="chatIframe" src="//webchat.7moor.com/view/moor_chat.html?v=20201208&amp;clientId=&amp;urlTitle=%E6%AD%A3%E5%BC%8F%E7%89%88-%E5%95%86%E5%AE%B6%E7%AE%A1%E7%90%86%E5%90%8E%E5%8F%B0&amp;fromUrl=http%3A%2F%2Fuser-admin.haobump.com%2Fcolorcard-cate%2Flist&amp;serviceStates=1&amp;accessId=a8b9dc50-a4dd-11e7-8924-959763bbd83d&amp;styleColor=ff4242&amp;peers=%5B%7B%22name%22%3A%22%E6%AC%BE%E6%AC%BE%E7%BD%91%22%2C%22id%22%3A%2210024507%22%2C%22status%22%3A%22enable%22%7D%5D&amp;sessionLastToPeer=&amp;otherParams=&amp;seoSource=%E7%AB%99%E5%86%85&amp;seoKeywords=&amp;xstKeywords=&amp;companyName=%E6%AC%BE%E6%AC%BE&amp;seoUrl=http%3A%2F%2Fuser-admin.haobump.com%2Fcolorcard%2Fcreate&amp;language=zh-CN&amp;href=http%3A%2F%2Fuser-admin.haobump.com%2F&amp;priority=false&amp;showAnnexUrl=false&amp;unionAccessId=undefined" height="100%" width="100%"></iframe><div id="maskChat"></div></div><div id="chatBtn" class="chatBtn" style="display: none; right: 18px; z-index: -100; background-color: rgb(255, 66, 66); border-radius: 5px 5px 0px 0px; bottom: -1px; padding: 8px 10px;"><img width="25px" height="25px" src="//webchat.7moor.com/images/7.png?1221" style="margin: 0px 5px -6px 0px;"><span>咨询客服</span><span id="qimo_badge"></span></div><div id="qimo_showNewMsg" class="qimo_showNewMsg" style="display: none; "><div id="qimo_showNewMsg_box" class="qimo_showNewMsg_box"><div id="qimo_showNewMsg_title_box" class="qimo_showNewMsg_title_box"><img src="//webchat.7moor.com/images/agentLogo.png"><span id="qimo_showNewMsg_title" class="qimo_showNewMsg_title"></span></div> <div id="qimo_showNewMsg_content" class="qimo_showNewMsg_content"></div></div><span id="qimo_showNewMsg_close" class="qimo_showNewMsg_close">x</span></div></div><script type="text/javascript" charset="UTF-8" src="//webchat.7moor.com/online?accessId=a8b9dc50-a4dd-11e7-8924-959763bbd83d&amp;location=user-admin.haobump.com&amp;action=validateEmebedState&amp;callbackF=validateEmebedState&amp;__=1609667122935"></script><div><div class="qimo_inviteBox" id="qimo_inviteBox" style="display: none; "><img class="qimo_invite_close" id="qimo_invite_close" src="//webchat.7moor.com/images/invite-close.png"><div class="qimo_inviteBox_top"><div class="qimo_inviteBox_top_img" id="qimo_inviteBox_top_img"><img id="qimo_inviteBox_img" src="//webchat.7moor.com/images/defaultPhoto.png"></div><div class="qimo_inviteBox_top_right" id="qimo_inviteBox_top_right"><p id="qimo_inviteBox_InviteWords"></p><div class="qimo_inviteBox_top_button" id="qimo_inviteBox_top_button"><div id="invite_click_button_1" class="divbuttons msie11PadTop">立即咨询</div><div id="invite_click_button_2" class="divbuttons msie11PadTop">稍后再说</div></div></div></div><div class="qimo_inviteBox_bottom"><textarea id="sendInviteText" placeholder="请输入您想要输入的内容..." rows="2"></textarea><div id="sendInviteContent" class="sendInviteContent msie11PadTop">发送</div></div></div></div><div><div class="qimo_screenpop" id="qimo_screenpop" style="display: none"><div class="screendragbar" id="screendrag"></div><div class="qimo_headerimg" id="qimo_headerimg"><div class="screenminimg" style="display: none" id="screenminimg"><img src="//webchat.7moor.com/images/small.png"></div><div class="screenminimg" id="screenmaximg"><img src="//webchat.7moor.com/images/big.png"></div><div class="screenminimg" id="screencloseimg"><img src="//webchat.7moor.com/images/close.png" style="width: 16px;height: 16px;"></div></div> <div id="mask"></div><iframe id="screenIframe" src="" height="100%" width="100%" allow="microphone; camera"></iframe></div></div><div><div class="qimo_videopup" id="qimo_videopup" style="display: none"><div style="" class="m7_dragbar" id="drag"><div class="qimo_minimg" id="qimo_minimg"><img src="//webchat.7moor.com/images/small.png"></div><div class="qimo_maximg" id="qimo_maximg" style="display: none"><img src="//webchat.7moor.com/images/big.png"></div> </div><div id="mask"></div><div id="m7videoIframe" style=" height: 100%; width: 100%;"></div></div></div>
+<!--<script src="/static/js/utils.js?av64132" id="utils"></script>-->
+<script type="text/javascript" src="/static/js/common.js"></script>
+<script type="text/javascript" src="/static/js/utils.js"></script>
+<script type="text/javascript" src="/static/js/colorcard/catelist.js"></script>
+<!--<script type="text/javascript" src="/static/js/user/supplier/materialCreate.js"></script>-->
+<script type="text/javascript" src="/static/js/user/supplier/materialCate.js"></script>
+
+
+
+<script>
+    /*$(function(){
+
+
+     /!*简单交互逻辑
+     1、事件交互逻辑
+     2、数据处理逻辑
+     3、
+
+
+     点击事件按钮->弹窗->确定 ->提交信息
+
+
+     //  事件触发属性
+
+
+     * *!/
+
+     //分类管理对象
+     var SupplierCateManage={}
+     SupplierCateManage.delObj;
+     SupplierCateManage.eventCallback=function(){
+
+     //事件进入查看绑定的类型
+     var eventType=$(this).attr('data-customCate-manage')
+
+     switch(eventType){
+     case 'add':
+
+     $('[data-customCate-input="add"]').val(' ')
+     $('[data-act-window="add"]').show();
+     break;
+
+     case 'edit':
+
+     var catname=$(this).parent().prev().text();
+     $('[data-customCate-input="edit"]').val(catname)
+     $('[data-act-window="edit"]').show();
+     $('[data-act-window="edit"]').attr('cateid',$(this).attr('data-customcate-id'))
+     break;
+
+     case 'delete':
+
+     $('[data-act-window="delete"]').show();
+     $('[data-act-window="delete"]').attr('cateid',$(this).attr('data-customcate-id'))
+     console.log("this",$(this).parents('.icon-list-parent').parent());
+     SupplierCateManage.delObj = $(this).parents('.icon-list-parent').parent();
+     break;
+
+     }
+
+
+
+     }
+
+
+     SupplierCateManage.comfirmCallback=function(){
+
+     var eventType=$(this).attr('data-customCate-comfirm');
+     var method,url,data,msg;
+     var distinction = [];
+
+     switch(eventType){
+     //分类添加
+     case 'add':
+     $(".organizational .icon-list-hd").each(function () {
+     distinction.push($(this).text());
+     console.log('distinction',distinction);
+     });
+     if(distinction.indexOf($('[data-customCate-input="add"]').val()) >= 0 || $('[data-customCate-input="add"]').val() == ''){
+     alert('重复或是不能为空')
+     return false;
+     }
+     method='post';
+     url='/supplier-category-create';
+     data={
+     parentid:0,
+     catname:$('[data-customCate-input="add"]').val()
+     };
+     break;
+
+     //分类编辑
+     case 'edit':
+     method='post';
+     url='/supplier-category-patch';
+     data={
+     catname:$('[data-customCate-input="edit"]').val(),
+     cateid:$('[data-act-window="edit"]').attr('cateid')
+     };
+     break;
+     //分类删除
+     case 'delete':
+     method='post';
+     url='/supplier-category-del';
+     data={
+     cateid:$('[data-act-window="delete"]').attr('cateid')
+     };
+
+     break;
+
+     }
+
+     console.log(data)
+
+
+     SupplierCateManage.request(method,url,data)
+
+     }
+
+     SupplierCateManage.request=function(method,url,data){
+
+     console.log('SupplierCateManage.delObj',SupplierCateManage.delObj)
+     $.ajax({
+     method:method,
+     url:url,
+     data:data,
+     success:function(res){
+     console.log(res)
+     console.log(res.msg)
+     SupplierCateManage.delObj.remove();
+
+     }
+     })
+     }
+
+
+     $('[data-customCate-manage]').click(SupplierCateManage.eventCallback)
+     $('[data-customCate-comfirm]').click(SupplierCateManage.comfirmCallback)
+
+
+
+     })*/
+
+</script></body><div class="service_pop dialog-wrap"> <div class="dialog pop-wrap" style=""><div class="pop-box-hd"><h4 id="download">咨询客服</h4> <div class="close"><i class="kicon-close"></i></div></div> <div class="pop-box"> <h4 class="mgt20 mgb50 fs20">是否要咨询客服?</h4><div class="pop-box-footer">  <button id="contentSure" class="btn-theme width-3 mgr20" onclick="qimoChatClick();">确定</button>  <button class="btn-gray width-3 close">取消</button></div></div> </div><div class="black-overlay"></div></div></html>
